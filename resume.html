@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kothakota Jatin Yadav - Resume</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .resume-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding-top: 100px; /* Space for navbar */
+        }
+        .resume-container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            padding-bottom: 50px;
+        }
+        .pdf-viewer {
+            width: 100%;
+            max-width: 900px;
+            height: 80vh;
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            background: #fff; /* PDFs usually need white background */
+            overflow: hidden;
+        }
+        .resume-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Jatin<span>.</span></a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html#home" class="nav-link">Back to Portfolio</a></li>
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="resume-page">
+        <div class="container resume-container">
+            <div class="resume-actions">
+                <a href="index.html" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Go Back</a>
+                <a href="assets/jatin.final_cv.pdf" download class="btn btn-primary"><i class="fas fa-download"></i> Download PDF</a>
+            </div>
+            
+            <object data="assets/jatin.final_cv.pdf" type="application/pdf" class="pdf-viewer">
+                <p>Your browser does not support viewing PDFs. <a href="assets/jatin.final_cv.pdf" download>Click here to download the resume.</a></p>
+            </object>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+</html>
